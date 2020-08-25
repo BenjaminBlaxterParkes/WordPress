@@ -32,10 +32,10 @@ define( 'DB_PASSWORD', 'wordpress');
 define( 'DB_HOST', 'db:3306');
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define( 'DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -46,14 +46,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         'a0a3dc501f27b208ddd2e6008bb0b3f1be28e605');
+define( 'SECURE_AUTH_KEY',  'ba30ca3ebbb82ccd3f6151693d36458eba4d226b');
+define( 'LOGGED_IN_KEY',    'e29308bf3f6e13cf007e0fc1ff5620963b8005b2');
+define( 'NONCE_KEY',        '6f3c2b768791ef321044e4f3f8f8105b0df120d3');
+define( 'AUTH_SALT',        '3a2180249a96e3a905270d32288c1ca6848c9d40');
+define( 'SECURE_AUTH_SALT', 'a39ac3d23418957d85c05a731553bc59e2fe404c');
+define( 'LOGGED_IN_SALT',   'ec6210e5243cb98c7bf4f9076008b58f94afd490');
+define( 'NONCE_SALT',       'cbdc6b0e9c9524feb3577df14693a52dd4b5e627');
 
 /**#@-*/
 
@@ -78,6 +78,12 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+
+// If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact
+// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+	$_SERVER['HTTPS'] = 'on';
+}
 
 /* That's all, stop editing! Happy publishing. */
 
