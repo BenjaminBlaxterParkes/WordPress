@@ -1,0 +1,282 @@
+/*
+    Theme Name:   Rokko Rokko Desu
+    Theme URI:    http://www.rokkorokkodesu.com
+    Description:  Rosa Lite Child Theme
+    Author:       Ben Parkes
+    Author URI:   http://www.rokkorokkodesu.com
+    Template:     rosa-lite
+    Version:      1.0.0
+    License:      GNU General Public License v2 or later
+    License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+    Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+    Text Domain:  rosalitechild
+*/
+
+/* GLOBAL */
+body {
+    background-color: #f8e601!important;
+    margin: 0;
+}
+header {
+    display: none!important;
+}
+#bg-ramen {
+    background: url(../assets/images/body/RokkoLogoBG.png);
+}
+.article__content {
+    /*background-image: linear-gradient(#f8e601, #f8e601, #f8e601, #f8e601, #f8e601, #f8e601, #f8e601, #ee559f)!important;*/
+    background: #f8e601!important;
+
+}
+.container {
+    background: transparent!important;
+    bottom: 0;
+}
+#end-of-page {
+    margin-bottom: 10rem;
+}
+/* GLOBAL END */
+
+/* TEXT */
+.hover-text a {
+    color: #ee559f!important;
+    border-bottom: none!important;
+    position: relative;
+    text-decoration: none;
+}
+.hover-text a:visited {
+    text-decoration: none;
+}
+.hover-text a:hover {
+    color: #ee559f;
+    text-decoration: none;
+}
+.hover-text a:before {
+content: "";
+position: absolute;
+width: 100%;
+height: 4px;
+bottom: -2px;
+left: 0;
+background-color: #ee559f;
+visibility: hidden;
+-webkit-transform: scaleX(0);
+transform: scaleX(0);
+-webkit-transition: all 0.3s ease-in-out 0s;
+transition: all 0.3s ease-in-out 0s;
+}
+.hover-text a:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.body-text {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 8rem!important;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+.blocks-gallery-item__caption {
+    font-size: 24px!important;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+#tw-target-text {
+    margin-top: 24rem;
+    margin-left: 17%;
+    margin-bottom: -35px!important;
+    font-size: 32px;
+    text-align: left;
+    color: #ee559f;
+    font-weight: bolder;
+}
+.open-jap {
+    margin-top: 24rem;
+    margin-left: 11%;
+    margin-bottom: -35px!important;
+    font-size: 32px;
+    text-align: left;
+    color: #ee559f;
+    font-weight: bolder;
+}
+.contact-jap {
+    margin-top: 5rem;
+    margin-left: 20%;
+    margin-bottom: -35px!important;
+    font-size: 32px;
+    text-align: left;
+    color: #ee559f;
+    font-weight: bolder;
+}
+#menu-title {
+    margin-top: 0!important;
+    margin-bottom: 5rem!important;
+    font-size: 104px;
+    text-align: center;
+    font-weight: 800!important;
+    color: #fff;
+    -webkit-text-stroke: 2.5px black;
+}
+.opening-text {
+    color: black;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+/* TEXT END */
+
+/* NAVIGATION */
+.flexbox {
+    background-color: #fff!important;
+}
+.site-header.headroom--not-top, .is--ie .site-header.headroom--not-top {
+    border-bottom: 4px solid #ee559f!important;
+}
+.nav-logo {
+    width: 50%;
+}
+.social-links {
+    display: inline-flex;
+}
+.social-links img {
+    margin: 0 5px;
+    padding: 10px;
+    width: 200px;
+}
+/* NAVIGATION END */
+
+/* MAIN BODY */
+#xtra-wide {
+    margin-top: 38px;
+}
+.container {
+    padding: 0!important;
+}
+.container, .page {
+    background: transparent!important;
+    margin: 0;
+    width: 100%!important;
+}
+.ramen-divider {
+    height: 100px;
+    width: 100%;
+    left: 0;
+    background-image: url(../rokko-rokko-desu/assets/images/body/RokkoRamen.png)!important;
+    position: absolute;
+    background-size: contain;
+}
+.ramen-divider img {
+    display: none;
+}
+/* MAIN BODY END */
+
+/* MAIN GALLERY */
+.blocks-gallery-grid, .wp-block-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 125%;
+    margin-left: -15%;
+}
+li.blocks-gallery-item figure {
+    border: solid #000 4px;
+    border-radius: 30px;
+}
+.blocks-gallery-grid.is-cropped .blocks-gallery-image a, 
+.blocks-gallery-grid.is-cropped .blocks-gallery-image img, 
+.blocks-gallery-grid.is-cropped .blocks-gallery-item a, 
+.blocks-gallery-grid.is-cropped .blocks-gallery-item img, 
+.wp-block-gallery.is-cropped .blocks-gallery-image a, 
+.wp-block-gallery.is-cropped .blocks-gallery-image img, 
+.wp-block-gallery.is-cropped .blocks-gallery-item a, 
+.wp-block-gallery.is-cropped .blocks-gallery-item img {
+    border-radius: 25px;
+}
+figcaption.blocks-gallery-item__caption {
+    border-radius: 28px;
+}
+/* MAIN GALLERY END */
+
+/* BUTTONS */
+.wp-block-button__link {
+    color: #000;
+    background-color: #fff  ;
+    border: #000 solid 4px;
+    border-radius: 28px;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+.wp-block-button__link:hover {
+    color: #f8e601!important;
+    background-color: #ee559f!important;
+}
+#sub-caption {
+    margin-top: -2rem!important;
+    margin-bottom: 8rem!important;
+}
+/* BUTTONS END */
+
+/* GOOGLE MAPS */
+#wpgmza_map {
+    border: solid black 3px;
+    border-radius: 26px;
+}
+/* GOOGLE MAPS END */
+
+/* FOOTER */
+.copyright-area.copyright-area__dark {
+    display: none;
+}
+.footer-block {
+    display: inline-flex;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 72px;
+    left: 0;
+    bottom: 0;
+    border-top: 4px solid #ee559f!important;
+}
+#footer-text {
+    margin: 20px auto;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.footer-pink {
+    color: #ee559f!important;
+    text-shadow:
+    -1px -1px 0 #f8e601,
+    0   -1px 0 #f8e601,
+    1px -1px 0 #f8e601,
+    1px  0   0 #f8e601,
+    1px  1px 0 #f8e601,
+    0    1px 0 #f8e601,
+    -1px  1px 0 #f8e601,
+    -1px  0   0 #f8e601;
+}
+.footer-yellow {
+    color: #f8e601!important;
+    text-shadow:
+    -1px -1px 0 #ee559f,
+    0   -1px 0 #ee559f,
+    1px -1px 0 #ee559f,
+    1px  0   0 #ee559f,
+    1px  1px 0 #ee559f,
+    0    1px 0 #ee559f,
+    -1px  1px 0 #ee559f,
+    -1px  0   0 #ee559f;
+}
+/* FOOTER END */
