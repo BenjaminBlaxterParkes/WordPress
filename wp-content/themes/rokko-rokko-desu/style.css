@@ -201,7 +201,7 @@ figcaption.blocks-gallery-item__caption {
 
 /* BUTTONS */
 .wp-block-button__link {
-    color: #000;
+    color: #000!important;
     background-color: #fff  ;
     border: #000 solid 4px;
     border-radius: 28px;
